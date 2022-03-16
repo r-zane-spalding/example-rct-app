@@ -15,7 +15,7 @@
     "moment": "2.18.1",
     "prop-types": "15.7.2",
     "randomcolor": "0.5.3",
-    "react-calendar-timeline": "file:../react-calendar-timeline/react-calendar-timeline"
+    "@r-zane-spalding/react-calendar-timeline": "0.27.4-beta"
   },
   "scripts": {
     "start": "react-scripts start",

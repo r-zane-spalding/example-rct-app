@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import moment from "moment";
+import moment, { Moment } from "moment";
 
-import Timeline from "react-calendar-timeline";
+import Timeline, { TimelineGroup, TimelineGroupBase, TimelineItem, TimelineItemBase } from "@r-zane-spalding/react-calendar-timeline"
 
 import generateFakeData from "./generate-fake-data";
 
@@ -18,8 +18,20 @@ var keys = {
   groupLabelKey: "title"
 };
 
-export default class App extends Component {
-  constructor(props) {
+type CustomTimelineProps = {
+}
+
+type State = {
+    groups:TimelineGroupBase[],
+    items:any,//TimelineItemBase<number>[],
+    defaultTimeStart: any,//Moment,
+    defaultTimeEnd: any,//Moment
+}
+
+export default class CustomTimeline extends React.Component {
+
+  state: State
+  constructor(props: any) {
     super(props);
 
     const { groups, items } = generateFakeData(150);
@@ -43,11 +55,9 @@ export default class App extends Component {
         items={items}
         keys={keys}
         sidebarContent={<div>Above The Left</div>}
-        itemsSorted
         itemTouchSendsClick={false}
         stackItems
         itemHeightRatio={0.75}
-        showCursorLine
         canMove={false}
         canResize={false}
         defaultTimeStart={defaultTimeStart}
