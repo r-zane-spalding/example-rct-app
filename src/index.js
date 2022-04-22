@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import CustomTimeline from "./CustomTimeline.tsx";
-import "@r-zane-spalding/react-calendar-timeline/lib/Timeline.css";
+import "@babylimon/react-calendar-timeline/lib/Timeline.css";
 import "./style.css";
 const App = () => (
   <div>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import moment, { Moment } from "moment";
 
-import Timeline, { TimelineGroup, TimelineGroupBase, TimelineItem, TimelineItemBase } from "@r-zane-spalding/react-calendar-timeline"
+import Timeline, { TimelineGroup, TimelineGroupBase, TimelineItem, TimelineItemBase } from "@babylimon/react-calendar-timeline"
 
 import generateFakeData from "./generate-fake-data";
 
